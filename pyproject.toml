@@ -1,0 +1,28 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "sqliteshell"
+authors = [
+    {name = "barrowcroft", email = "barrowcroft@outlook.com"},
+]
+description = "A simple SQLite shell"
+version="1.0.0"
+
+readme = "README.md"
+requires-python = ">=3.12"
+keywords = ["one", "two"]
+license = {text = "MIT"}
+
+classifiers = [
+    "Programming Language :: Python :: 3",
+]
+dependencies = [
+    "cli@git+https://github.com/barrowcroft63/cli.git",
+    "clp@git+https://github.com/barrowcroft63/clp.git",
+    "sqli@git+https://github.com/barrowcroft63/sqli.git",
+    ]
+
+[project.scripts]
+sqliteshell = "sqliteshell.__main__:main"
